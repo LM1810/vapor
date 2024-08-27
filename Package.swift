@@ -96,15 +96,6 @@ let package = Package(
             .product(name: "_NIOFileSystemFoundationCompat", package: "swift-nio"),
         ]),
 
-        // Development
-        .executableTarget(
-            name: "Development",
-            dependencies: [
-                .target(name: "Vapor"),
-            ],
-            resources: [.copy("Resources")]
-        ),
-
         // Testing
         .target(name: "XCTVapor", dependencies: [
             .target(name: "Vapor"),

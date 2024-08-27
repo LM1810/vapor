@@ -96,15 +96,6 @@ let package = Package(
             swiftSettings: [.enableExperimentalFeature("StrictConcurrency=complete")]
         ),
 
-        // Development
-        .executableTarget(
-            name: "Development",
-            dependencies: [
-                .target(name: "Vapor"),
-            ],
-            resources: [.copy("Resources")],
-            swiftSettings: [.enableExperimentalFeature("StrictConcurrency=complete")]
-        ),
 
         // Testing
         .target(
